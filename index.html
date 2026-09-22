@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Lego Ideas The Botanical Garden (21353) - Visor 3D Interactivo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+  <div id="loader"><div class="loader-spin"></div><div class="loader-text">Inicializando Invernadero 3D...</div></div>
+  <div id="canvas3d"></div>
+  <div class="ui-layer">
+    <div class="top-bar">
+      <div class="badge-lego interactive">
+        <h1>The Botanical Garden</h1>
+        <p>LEGO® IDEAS 21353 • ARQUITECTURA VICTORIANA</p>
+        <div class="specs-pill"><span class="spec-item">3,792 PIEZAS</span><span class="spec-item">51 x 25 x 22 CM</span><span class="spec-item" style="color:#00ffa3">COFFEA ARABICA &amp; PALMA</span></div>
+      </div>
+      <div class="control-deck interactive">
+        <button id="btnRoof" class="ctrl-btn"><span>⏏</span><span id="roofTxt">Retirar Techos</span></button>
+        <button id="btnLight" class="ctrl-btn amber active"><span>☼</span><span id="lightTxt">Luz: Día Victoriano</span></button>
+        <button id="btnRotate" class="ctrl-btn"><span>↻</span> Giro Auto</button>
+      </div>
+    </div>
+    <div class="bottom-bar">
+      <div class="views-cluster interactive"><span class="view-label">Vistas:</span>
+        <button class="view-chip active" data-view="front">Fachada</button><button class="view-chip" data-view="dome">Cúpula</button><button class="view-chip" data-view="mezzanine">Palmera / Mezzanine</button><button class="view-chip" data-view="arid">Ala Árida</button><button class="view-chip" data-view="cafe">Ala Café</button><button class="view-chip" data-view="top">Cenital</button>
+      </div>
+      <div class="info-card interactive"><strong id="cardTitle">Invernadero Victoriano de Cristal</strong><p id="cardDesc">Estructura central con atrio elevado, linterna decorativa y dos atrios laterales simétricos. En el interior se aprecia la icónica palmera datilera que asciende por la cúpula y los ejemplares de Coffea arabica.</p><span class="instructions-hint">Arrastra para orbitar 360° • Rueda o pellizco para zoom</span></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
